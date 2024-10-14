@@ -44,18 +44,17 @@ add.addEventListener("click", () => {
   let input = document.querySelector(".inputy");
   let text = input.value.trim();
 
-  // Ensure input is not empty
   if (text) {
-    todos.push({ text }); // Add todo to the array
-    render(); // Call render function to display the todos
-    input.value = ""; // Clear input field
+    todos.push({ text });
+    render();
+    input.value = "";
   } else {
-    alert("Please enter a task."); // Alert if input is empty
+    alert("Please enter a task.");
   }
 });
 
 function render() {
-  container.innerHTML = ""; // Clear existing todos
+  container.innerHTML = "";
   for (let i = 0; i < todos.length; i++) {
     let h3 = document.createElement("h3");
     let div = document.createElement("div");
@@ -65,32 +64,27 @@ function render() {
     div.classList.add("task");
 
     let textco = todos[i].text;
-    h3.textContent = textco; // Set the todo text
+    h3.textContent = textco;
 
-    // Append checkbox and todo text to the task div
     div.append(input);
     div.append(h3);
     container.append(div);
 
-    // Add event listener to the checkbox
     input.addEventListener("change", function () {
       if (input.checked) {
-        // Wrap text in <del> tag when checked
         const del = document.createElement("del");
-        del.textContent = textco; // Set the del text to the todo text
-        h3.innerHTML = ""; // Clear the current text
-        h3.appendChild(del); // Append the <del> to the h3
+        del.textContent = textco;
+        h3.innerHTML = "";
+        h3.appendChild(del);
         h3.style.color = "#6b6b6b";
       } else {
-        // When unchecked, remove <del> and show original text
-        h3.textContent = textco; // Restore original text
+        h3.textContent = textco;
         h3.style.color = "#111";
       }
     });
   }
 }
 
-// Calendar rendering code remains unchanged
 const daysTag = document.querySelector(".days"),
   currentDate = document.querySelector(".current-date"),
   prevNextIcon = document.querySelectorAll(".icons span");
