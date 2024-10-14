@@ -5,10 +5,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Live Demo](#live-demo)
 
 ## Overview
 
@@ -26,9 +23,6 @@ This is a simple **Todo App** built with **pure HTML, CSS, and JavaScript**. It 
 - **CSS3**: Styling and layout.
 - **JavaScript (ES6)**: Core functionality of the app.
 
-## Setup
+## Live Demo
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/todo-app.git
-   ```
+Check out the project live at [https://purrii0.github.io/simpleTodo/](https://purrii0.github.io/simpleTodo/)
